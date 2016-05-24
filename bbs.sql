@@ -1,6 +1,6 @@
 create table users
 (
-	id text(20) NOT NULL,
+	id text(20) NOT NULL UNIQUE,
 	password text NOT NULL,
 	account text(10) NOT NULL,
 	branch int NOT NULL,	
@@ -26,10 +26,10 @@ create table comments
 
 create table branches
 (
-	name text NOT NULL
+	name text NOT NULL UNIQUE
 );
 
 create table departments_positions
 (
-	name text NOT NULL
+	name text NOT NULL UNIQUE
 );
