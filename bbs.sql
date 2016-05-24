@@ -1,35 +1,45 @@
-create table users
+CREATE TABLE users
 (
-	id text(20) NOT NULL UNIQUE,
-	password text NOT NULL,
-	account text(10) NOT NULL,
-	branch int NOT NULL,	
-	department_position int NOT NULL,
-	status text NOT NULL
+	id int NOT NULL AUTO_INCREMENT,
+	password VARCHAR(255) NOT NULL,
+	account VARCHAR(10) NOT NULL,
+	branch VARCHAR(255) NOT NULL,	
+	position VARCHAR(255) NOT NULL,
+	status BOOLEAN NOT NULL,
+	PRIMARY KEY (id)
 );
 
-create table postings
+CREATE TABLE postings
 (
-	subject text(50) NOT NULL,
+	id int NOT NULL AUTO_INCREMENT,
+	subject VARCHAR(50) NOT NULL,
 	body text(1000) NOT NULL,
-	category text(10) NOT NULL,
+	category VARCHAR(10) NOT NULL,
 	registration_date timestamp NOT NULL,
-	registrant text(10) NOT NULL
+	registrant VARCHAR(10) NOT NULL,
+	PRIMARY KEY (id)
 );
 
-create table comments
+CREATE TABLE comments
 (
+	id int NOT NULL AUTO_INCREMENT,
 	body text(500) NOT NULL,
 	registration_date timestamp NOT NULL,
-	registrant text(10) NOT NULL
+	registrant VARCHAR(10) NOT NULL,
+	PRIMARY KEY (id)
 );
 
-create table branches
+CREATE TABLE branches
 (
-	name text NOT NULL UNIQUE
+	id int NOT NULL AUTO_INCREMENT,
+	name text NOT NULL,
+	PRIMARY KEY (id)
 );
 
-create table departments_positions
+CREATE TABLE departments_positions
 (
-	name text NOT NULL UNIQUE
+	id int NOT NULL AUTO_INCREMENT,
+	name text NOT NULL,
+	PRIMARY KEY (id)
 );
+
