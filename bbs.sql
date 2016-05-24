@@ -34,13 +34,13 @@ CREATE TABLE comments
 CREATE TABLE branches
 (
 	id int NOT NULL AUTO_INCREMENT,
-	name text NOT NULL,
+	name VARCHAR(255) NOT NULL,
 	PRIMARY KEY (id)
 );
 
-CREATE TABLE departments_positions
+CREATE TABLE positions
 (
 	id int NOT NULL AUTO_INCREMENT,
-	name text NOT NULL,
+	name VARCHAR(255) NOT NULL,
 	PRIMARY KEY (id)
 );
