@@ -13,7 +13,6 @@ CREATE TABLE users
 CREATE TABLE postings
 (
 	id int NOT NULL AUTO_INCREMENT,
-	posting_id int NOT NULL,
 	subject VARCHAR(50) NOT NULL,
 	body text(1000) NOT NULL,
 	category VARCHAR(10) NOT NULL,
@@ -25,6 +24,7 @@ CREATE TABLE postings
 CREATE TABLE comments
 (
 	id int NOT NULL AUTO_INCREMENT,
+	posting_id int NOT NULL,
 	body text(500) NOT NULL,
 	registration_date timestamp NOT NULL,
 	user_id int NOT NULL,
